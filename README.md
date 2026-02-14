@@ -18,6 +18,7 @@ On Project Ebonhold, dying resets your character back to Level 1 while keeping o
 - **Combat-Safe Restore** — If you level up during combat, the restore is deferred until combat ends.
 - **Explorer UI** — Visual bar explorer showing all 10 action bars with keybindings, macro names, and per-slot inspection. Includes restore button and master sync toggle.
 - **Multi-Spec Support** — Up to 5 spec profiles with independent layouts, integrated with Project Ebonhold's spec system.
+- **Highest Rank Restore** — When restoring spells, the addon always places the highest available rank from your spellbook.
 - **Verify Pass** — After every restore, slots are re-checked and corrected for server overrides (e.g. auto-placed spells).
 
 ## Installation
