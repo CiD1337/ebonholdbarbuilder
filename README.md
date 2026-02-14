@@ -11,7 +11,9 @@ On Project Ebonhold, dying resets your character back to Level 1 while keeping o
 ## Features
 
 - **Master Layout** — Your highest-level layout is the single source of truth. During reruns (leveling back up after death), bars are restored from the master at every level-up.
-- **Master Sync** — Bar changes made during reruns (moving spells, adding macros) are detected and propagated back to the master layout, keeping it up to date.
+- **Master Sync** — Bar changes made during reruns are detected and propagated back to the master layout, keeping it up to date.
+  - **Synced:** Moving, swapping, and placing spells, items, macros, companions, and equipment sets. Removing macros, companions, or equipment sets (always available at any level, so removal is intentional).
+  - **Not synced:** Removing spells or items from slots — these are ignored because you may not have learned the spell or looted the item yet at your current level.
 - **Death Reset Handling** — Automatically detects the level 80 → 1 reset, preserves your high-level layout, and restores Level 1 bars if available.
 - **Combat-Safe Restore** — If you level up during combat, the restore is deferred until combat ends.
 - **Explorer UI** — Visual bar explorer showing all 10 action bars with keybindings, macro names, and per-slot inspection. Includes restore button and master sync toggle.
@@ -45,7 +47,7 @@ All commands use the `/ebb` prefix:
 
 ## How it works
 
-1. **Capture** — When action bar slots change, a debounced snapshot captures all enabled slots.
+1. **Capture** — When action bar slots change, the addon waits briefly for further changes to settle, then takes a snapshot of all enabled slots.
 2. **Save** — On first-time leveling, the snapshot is saved as a per-level layout. Only the highest level (master) is kept; lower layouts are pruned.
 3. **Restore** — On level-up during a rerun, the master layout is restored: spells, items, macros, companions, and equipment sets are placed back on bars.
 4. **Sync** — During reruns, any bar changes you make are diffed against a baseline snapshot and applied back to the master layout, so your master stays current.
