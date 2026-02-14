@@ -1,15 +1,8 @@
-# Original-Creator Referenzkopie
-EBB-GitHub/
-
-# Interne Dokumente
-zusammenfassung*.txt
 Changelog.txt
 CLAUDE.md
 
-# Claude Code
 .claude/
 
-# OS-Dateien
 .DS_Store
 Thumbs.db
 Desktop.ini
