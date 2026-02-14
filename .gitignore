@@ -3,6 +3,10 @@ CLAUDE.md
 
 .claude/
 
+# Local reference files
+EBB-GitHub/
+comparison.txt
+
 .DS_Store
 Thumbs.db
 Desktop.ini
