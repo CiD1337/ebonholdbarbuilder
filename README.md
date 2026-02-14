@@ -8,6 +8,8 @@ Action bar layout manager for World of Warcraft 3.3.5a (WotLK), built for **Proj
 
 On Project Ebonhold, dying resets your character back to Level 1 while keeping overall progression. EbonholdBarBuilder saves your action bar layouts and automatically restores them as you level back up, so you never have to manually rebuild your bars after a death reset.
 
+![Explorer UI](docs/explorer.png)
+
 ## Features
 
 - **Master Layout** — Your highest-level layout is the single source of truth. During reruns (leveling back up after death), bars are restored from the master at every level-up.
